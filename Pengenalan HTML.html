@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Pembelajaran</title>
+    <script type="module" src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+    <link rel="stylesheet" href="css/Pengenalan HTML.css">
+</head>
+<body>
+    <div id="header">
+        <img src="Images/Logo.png" alt="" onclick="location.href='index.html';">
+        <div id="buttonRight" style="height: 45px;">
+            <img src="Images/notifications.png" alt="" >
+            <img src="Images/Burger.png" alt="">
+        </div>
+    </div>
+
+    <div class="teks">
+        <h2>HTML</h2>
+        <p>HTML (HyperText Markup Language) adalah bahasa standar yang digunakan untuk membuat dan merancang halaman web. HTML berfungsi untuk menyusun struktur konten pada halaman web, seperti teks, gambar, tautan, tabel, video, dan elemen interaktif lainnya. HTML bukanlah bahasa pemrograman, melainkan bahasa markup yang menggunakan tag untuk menandai elemen-elemen dalam sebuah dokumen web.</p>
+        
+        
+        <h2>Memahami HTML</h2>
+        <ul>
+            <li class="number" style="font-weight: 600;">
+                <h4>HTML dibentuk oleh elemen-elemen yang terdiri dari:</h4>
+            </li>
+            <ul>
+                <li><p>Tag pembuka: Menandai awal elemen. Misalnya, &lt;p> menandai awal dari sebuah paragraf.</p></li>
+                <li><p>Konten: Teks atau elemen yang ditempatkan di antara tag pembuka dan tag penutup.</p></li>
+                <li><p>Tag penutup: Menandai akhir elemen. Misalnya, &lt;/p> menandai akhir dari sebuah paragraf.</p></li>
+                <p>Contoh elemen HTML:</p>
+                <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                    <code slot="code">&lt;p>Ini adalah paragraf.<p>
+                    </code>
+                </deckgo-highlight-code>
+            </ul>
+            <li class="number" style="font-weight: 600;">
+                <h4>Struktur Dasar HTML: Setiap halaman web dimulai dengan struktur HTML dasar.</h4>
+            </li>
+                <ul>
+                    <P>Contoh struktur HTML sederhana:</P>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code">&lt;html>
+&lt;head>
+&lt;title>Document</title>
+&lt;/head>
+&lt;body>
+    &lt;p>paragraf.&lt;/p>
+&lt;/body>
+&lt;/html></code>
+</deckgo-highlight-code>
+
+                </ul>
+            </ul>
+
+
+        <h2>Menjalankan File HTML di Browser</h2>
+        <ul>
+            <li class="number" style="font-weight: 600;">
+                <h4>Membuat File HTML di Text Editor</h4>
+            </li>
+            <ul>
+                <li><p>Pertama, tulis kode HTML di text editor seperti Visual Studio Code (VS Code), Sublime Text, atau Notepad++.</p></li>
+                <li><p>Misalnya, Anda membuat kode HTML sederhana seperti berikut:</p></li>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code">&lt;html>&lt;!DOCTYPE html>
+&lt;html lang="id">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;title>Halaman HTML Pertama&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;h1>Selamat Datang di Halaman Pertama Saya&lt;/h1>
+    &lt;p>Ini adalah contoh halaman HTML sederhana.&lt;p>
+&lt;/body>
+&lt;/html></code>
+</deckgo-highlight-code>
+            </ul>
+
+            
+            <li class="number" style="font-weight: 600;">
+                <h4>Menyimpan File HTML</h4>
+            </li>
+            <ul>
+                <li><p>Setelah Anda selesai menulis kode HTML, simpan file tersebut:</p></li>
+                <ul>
+                    <li><p>Klik File > Save As atau tekan Ctrl + S (Windows) atau Cmd + S (Mac).</p></li>
+                    <li><p>Beri nama file tersebut, misalnya index.html. Pastikan Anda menyimpan file dengan ekstensi .html.</p></li>
+                    <li><p>Pilih lokasi di komputer Anda di mana Anda ingin menyimpan file tersebut, misalnya di folder Dokumen.</p></li>
+                </ul>
+
+            </ul>
+
+            <li class="number" style="font-weight: 600;">
+                <h4>Menjalankan File HTML di Browser</h4>
+            </li>
+            <p>Setelah menyimpan file HTML, ikuti langkah-langkah berikut untuk menjalankannya di browser:</p>
+            <ul>
+                <li class="number" style="font-weight: 600;"><p>Buka File di Browser Secara Langsung:</p></li>
+                <ul>
+                    <li><p>Buka File Explorer atau Finder (di Mac).</p></li>
+                    <li><p>Navigasikan ke lokasi tempat Anda menyimpan file HTML tadi.</p></li>
+                    <li><p>Klik dua kali (double-click) pada file index.html atau klik kanan dan pilih Open With, kemudian pilih browser seperti Google Chrome, Mozilla Firefox, atau Microsoft Edge.</p></li>
+                    <li><p>File HTML akan terbuka di browser, dan Anda akan melihat halaman sesuai dengan kode HTML yang telah Anda tulis.</p></li>
+                </ul>
+                <li class="number" style="font-weight: 600;"><p>Buka File di Browser Secara Langsung:</p></li>
+                <ul>
+                    <li><p>Buka browser favorit Anda (Google Chrome, Firefox, Edge, atau lainnya).</p></li>
+                    <li><p>Tekan tombol Ctrl + O (Windows) atau Cmd + O (Mac) untuk membuka file.</p></li>
+                    <li><p>Cari file index.html yang sudah Anda simpan di komputer, kemudian klik Open.</p></li>
+                    <li><p>File HTML akan ditampilkan di browser.</p></li>
+                </ul>
+            </ul>
+
+            <li class="number" style="font-weight: 600;">
+                <h4>Pratinjau Perubahan di Browser</h4>
+            </li>
+            <p>Setiap kali Anda membuat perubahan pada file HTML di text editor, simpan perubahan tersebut (tekan Ctrl + S atau Cmd + S).<br><br>Setelah itu, kembali ke browser dan refresh/reload halaman (tekan Ctrl + R atau F5 di Windows, atau Cmd + R di Mac) untuk melihat perubahan yang baru saja Anda buat.</p>
+        </ul>
+
+
+        <h2>Fungsi tag HTML</h2>
+        <ul>
+            <li>
+                <p>Struktur dokumen:</p>
+                <p>seperti yang dijelaskan oleh FreeCodeCamp, tag HTML membantu dalam menyusun struktur dokumen HTML. Mulai dari header sampai footer, setiap bagian dari halaman web dikelilingi oleh tag tertentu. Hal ini membantu browser dalam menafsirkan dan menampilkan konten secara tepat.</p>
+            </li>
+            <li>
+                <p>Format konten:</p>
+                <p>tag HTML tidak hanya menyusun, tapi juga memformat konten. Misalnya, tag seperti &lt;b> untuk tebal, &lt;i> untuk miring, dan &lt;u> untuk bergaris bawah membantu kita untuk menonjolkan bagian tertentu dari teks.</p>
+            </li>
+            <li>
+                <p>Menyisipkan media:</p>
+                <p>tag HTML seperti &lt;img> dan &lt;video> memungkinkan kita untuk menyertakan gambar atau video dalam laman web. Fungsi ini membuat laman web menjadi lebih interaktif dan menarik.</p>
+            </li>
+            <li>
+                <p>Pembuatan link:</p>
+                <p>tag HTML juga ada yang digunakan untuk membuat hyperlink, sehingga kamu dapat berpindah dari satu halaman ke halaman lain. Dengan fungsi ini, web menjadi dinamis dan saling terhubung.</p>
+            </li>
+            <li>
+                <p>Integrasi dengan CSS dan JavaScript:</p>
+                <p>tag HTML juga berguna sebagai jembatan dengan CSS dan JavaScript. Kita bisa menambahkan gaya dan fungsi interaktif ke halaman web. Proses ini juga membantu dalam meningkatkan user experience.</p>
+            </li>
+            <li>
+                <p>Aksesibilitas:</p>
+                <p>menurut TutorialsTonight, dengan menggunakan tag seperti &lt;alt> pada gambar, kita dapat menjadikan laman web lebih mudah diakses oleh orang-orang yang memiliki keterbatasan.</p>
+            </li>
+            <li>
+                <p>Search Engine Optimization (SEO):</p>
+                <p>tag HTML membantu mesin pencari seperti Google dalam mengenali dan menilai konten laman web, sehingga memungkinkan laman tersebut muncul dalam hasil pencarian yang relevan.</p>
+            </li>                
+        </ul>
+
+
+        <h2>Tag HTML Dasar</h2>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Keterangan</th>
+                </tr>
+                <tr>
+                    <td>'&lt;html>'</td>
+                    <td>Digunakan untuk mendefinisikan seluruh dokumen HTML.</td>
+                </tr>
+                <tr>
+                    <td>'&lt;head>'</td>
+                    <td>Berisi informasi meta tentang dokumen, seperti judul, link ke file CSS, dan lainnya.</td>
+                </tr>
+                <tr>
+                    <td>'&lt;title>'</td>
+                    <td>Dipakai di dalam elemen '&lt;head>' untuk menetapkan judul halaman web yang akan ditampilkan pada tab browser. Penting untuk diingat bahwa dalam satu dokumen HTML, hanya akan diterima satu tag '&lt;title>' saja.</td>
+                </tr>
+                <tr>
+                    <td>'&lt;body>'</td>
+                    <td>Merupakan bagian utama dari halaman web, di mana berisi semua konten yang ingin ditampilkan kepada audiens.</td>
+                </tr>
+                <tr>
+                    <td>'&lt;h1>'-'&lt;h6>'</td>
+                    <td>Digunakan untuk judul dan subjudul, dengan '&lt;h1>' sebagai judul utama dan '&lt;h6>' sebagai judul terkecil.</td>
+                </tr>
+                <tr>
+                    <td>'&lt;p>'</td>
+                    <td>Berfungsi untuk paragraf teks.</td>
+                </tr>
+                <tr>
+                    <td>'&lt;a>'</td>
+                    <td>Digunakan untuk membuat hyperlink ke halaman web lain.</td>
+                </tr>
+                <tr>
+                    <td>'&lt;br>'</td>
+                    <td>Digunakan untuk membuat jeda baris dalam teks.</td>
+                </tr>
+                <tr>
+                    <td>'&lt;hr>'</td>
+                    <td>Dipakai untuk membuat garis horizontal. Biasanya sering digunakan sebagai pemisah konten.</td>
+                </tr>
+                <tr>
+                    <td>'&lt;div>'</td>
+                    <td>Merupakan tag untuk mengelompokkan elemen lainnya, sehingga memungkinkan kontrol yang lebih baik terhadap style dan layout. '&lt;div>' adalah block-level element yang akan membuat baris baru saat dibuat.</td>
+                </tr>
+                <tr>
+                    <td>'&lt;span>'</td>
+                    <td>Tag untuk mengelompokkan elemen lainnya, tetapi sebagai inline element. Tidak akan membuat baris baru saat dibuat.</td>
+                </tr>            
+            </table>
+        </div>
+        
+        <ul>
+            <li class="number" style="font-weight: 600;">
+                <h4>Struktur dasar html</h4>
+            </li>
+            <ul>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code"&lt;!DOCTYPE html> <!-- Deklarasi tipe dokumen HTML5. -->
+&lt;html>&lt;/html> <!-- Elemen akar dari sebuah dokumen HTML. -->
+&lt;head>&lt;/head> <!-- Bagian kepala dokumen, berisi metadata seperti judul, gaya, dan skrip. -->
+&lt;body>&lt;/body> <!-- Bagian badan dokumen, berisi konten yang akan ditampilkan di halaman. --></code>
+</deckgo-highlight-code>
+<br>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code">&lt;html>
+&lt;head>
+&lt;title>Contoh Halaman HTML</title>
+&lt;/head>
+&lt;body>
+&lt;/body>
+&lt;/html></code>
+</deckgo-highlight-code>
+            </ul>
+
+
+            <li class="number" style="font-weight: 600;">
+                <h4>Elemen Teks</h4>
+            </li>
+            <ul>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code">&lt;!DOCTYPE html>
+&lt;html>
+    &lt;body>
+        &lt;h1>Heading 1&lt;/h1>
+        &lt;h2>Heading 2&lt;/h2>
+        &lt;h3>Heading 3&lt;/h3>
+        &lt;h4>Heading 4&lt;/h4>
+        &lt;h5>Heading 5&lt;/h5>
+        &lt;h6>Heading 6&lt;/h6>
+    &lt;/body>
+&lt;/html></code>
+</deckgo-highlight-code>
+            <p>Teks dengan sekat seperti berikut ini</p>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code">&lt;!DOCTYPE html>
+&lt;body>
+    &lt;h1>This is heading 1&lt;/h1>
+    &lt;p>This is some text.&lt;/p>
+    &lt;hr>
+​
+    &lt;h2>This is heading 2&lt;/h2>
+    &lt;p>This is some other text.&lt;/p>
+    &lt;hr>
+​
+    &lt;h2>This is heading 2&lt;/h2>
+    &lt;p>This is some other text.&lt;/p>
+&lt;/body></code>
+</deckgo-highlight-code>
+            </ul>
+
+            <li class="number" style="font-weight: 600;">
+                <h4>Elemen Teks</h4>
+            </li>
+            <ul>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code">&lt;!DOCTYPE html>
+&lt;html>
+    &lt;body>
+        &lt;h2>HTML Image&lt;/h2>
+        &lt;img src="img_chania.jpg" alt="Flowers in Chania" width="260" height="245">
+    &lt;/body>
+&lt;/html></code>
+</deckgo-highlight-code>
+                <p>src: Atribut untuk menentukan sumber gambar.<br><br>alt: Atribut untuk memberikan teks alternatif jika gambar tidak dapat dimuat.</p>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code">&lt;!DOCTYPE html>
+&lt;html>
+    &lt;body>
+        &lt;h1>HTML Links&lt;/h1>
+        &lt;p>&lt;a href="https://www.w3schools.com/">Visit W3Schools.com!&lt;/a>&lt;/p>
+    &lt;/body>
+&lt;/html></code>
+</deckgo-highlight-code>
+            </ul>
+
+            <li class="number" style="font-weight: 600;">
+                <h4>Elemen daftar</h4>
+            </li>
+            <ul>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code">&lt;!DOCTYPE html>
+&lt;body>
+    &lt;h2>An Unordered HTML List&lt;/h2>
+    &lt;ul>
+        &lt;li>Coffe&lt;/li>
+        &lt;li>Tea&lt;/li>
+        &lt;li>Milk&lt;/li>
+    &lt;/ul>
+    &lt;h2>An Ordered HTML List&lt;/h2>
+    &lt;ol>
+        &lt;li>Coffe&lt;/li>
+        &lt;li>Tea&lt;/li>
+        &lt;li>Milk&lt;/li>
+    &lt;/ol>
+&lt;/body></code>
+</deckgo-highlight-code>
+                <p>&lt;ul>: Daftar tidak bernomor.<br><br>&lt;ol>: Daftar bernomor.<br><br>&lt;li>: Item dalam daftar.</p>
+            </ul>
+
+
+            <li class="number" style="font-weight: 600;">
+                <h4>Elemen tabel</h4>
+            </li>
+            <ul>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code">&lt;!DOCTYPE html>
+&lt;body>
+    &lt;table border="1">
+        &lt;tr>
+            &lt;th>Nama&lt;/th>
+            &lt;th>Umur&lt;/th>
+        &lt;/tr>
+        &lt;tr>
+            &lt;td>Budi&lt;/td>
+            &lt;td>16&lt;/td>
+        &lt;/tr>
+    &lt;/table>
+&lt;/body></code>
+</deckgo-highlight-code>
+                <p>&lt;table>: Membuat tabel.<br><br>&lt;tr>: Mendefinisikan baris dalam tabel.<br><br>&lt;th>: Sel header tabel.<br><br>&lt;td>: Sel data tabel.</p>
+            </ul>
+
+
+            <li class="number" style="font-weight: 600;">
+                <h4>Elemen div</h4>
+            </li>
+            <ul>
+                <p><span style="font-weight: 600;">Memahami Elemen &lt;div></span></p>
+                <p>Elemen &lt;div> adalah elemen blok generik dalam HTML. Ini tidak memiliki makna semantik khusus, tetapi sering digunakan untuk mengatur tata letak dan gaya elemen lainnya.</p>
+                <p><span style="font-weight: 600;">Menambahkan Warna dengan CSS</span></p>
+                <p>Untuk memberikan warna pada elemen &lt;div>, kita akan menggunakan properti background-color dalam CSS.</p>
+
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code">&lt;!DOCTYPE html>
+&lt;html>
+    &lt;head>
+        &lt;title>Contoh Penggunaan Div dengan Warna&lt;/title>
+        &lt;style>
+            .biru{
+                background-color: blue;
+                padding: 20px;
+            }
+            .hijau{
+                background-color: green;
+                text-align: center;
+            }
+        &lt;/style>
+    &lt;/head>
+    &lt;body>
+        &lt;div class="biru">
+            &lt;h1>Ini adalah bagian dengan latar belakang biru&lt;/h1>
+            &lt;p>Teks dalam div in akan memiliki latar belakang biru&lt;/p>
+        &lt;/div>
+        &lt;div class="hijau">
+            &lt;h1>Ini adalah bagian dengan latar belakang hijau&lt;/h1>
+            &lt;p>Teks dalam div in akan memiliki latar belakang hijau&lt;/p>
+        &lt;/div>
+    &lt;/body>
+&lt;/html></code>
+</deckgo-highlight-code>
+
+                <p><span style="font-weight: 600;">Penjelasan Kode</span></p>
+                <ul>
+                    <li><p>&lt;style>: Tag ini digunakan untuk mendefinisikan gaya CSS di dalam dokumen HTML.</p></li>
+                    <li><p>.biru dan .hijau: Ini adalah selector kelas CSS. Kita menggunakan kelas untuk memberikan gaya pada elemen yang sama.</p></li>
+                    <li><p>background-color: Properti ini mengatur warna latar belakang elemen.</p></li>
+                    <li><p>padding: Properti ini menambahkan jarak antara konten dan tepi elemen.</p></li>
+                    <li><p>text-align: Properti ini mengatur penjajaran teks di dalam elemen</p></li>
+                </ul>
+                <p><span style="font-weight: 600;">Penjelasan Kode</span></p>
+                <ul>
+                    <li><p>Elemen &lt;div>: Kita membuat dua elemen &lt;div> dengan kelas biru dan hijau.</p></li>
+                    <li><p>Selector Kelas: CSS akan mencari elemen dengan kelas yang sesuai (.biru atau .hijau).</p></li>
+                    <li><p>Penerapan Gaya: Setelah ditemukan, CSS akan menerapkan gaya yang telah didefinisikan (warna latar belakang, padding, dan penjajaran teks).</p></li>
+                </ul>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <img src="Images/Tombol.svg" alt="kiri" onclick="location.href='Text editor dan Browser.html';">
+        <h4>Pengenalan HTML</h4>
+        <img src="Images/Tombol-kanan.svg" alt="kanan" onclick="location.href='HTML Container.html';">
+    </div>
+</body>
+</html>

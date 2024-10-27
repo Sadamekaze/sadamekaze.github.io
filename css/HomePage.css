@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand';
+}
+
+#header, #buttonRight {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    height: 60px;
+    justify-content: space-between; 
+    align-items: center;   
+    padding: 0px 9%
+}
+
+#header img{
+    cursor: pointer;
+}
+
+#buttonRight{
+    border-style: none;
+    cursor: pointer;
+    padding: 0px;
+}
+
+#header img, #buttonRight img {
+    display: inline-flex;
+    height: 70%;
+}
+
+#search-container {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.search-input{
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    padding: 0px 20px;
+    height: 50px;
+    width: 82%;
+}
+
+h2{
+    font-weight: bold;
+    text-align: center;
+    line-height: 48px;
+    margin: 30px 9%;
+}
+
+#kelas h5, #tingkat h5{
+    padding-bottom: 14px;
+}
+
+#kelas, #tingkat {
+    margin: 20px 9%;
+}
+
+.materi{
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    margin: 15px 9%;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.judul img {
+    float: left;
+    margin-right: 20px; 
+    width: 100px;
+    border-radius:15%;
+}
+
+.judul h4 {
+    letter-spacing: -1px;
+}
+
+.deskripsi{
+    padding-top: 10px;
+    letter-spacing: 12%;
+    font-weight: normal;
+    letter-spacing: -1px;
+    clear: both;
+    color: #71717A;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%
+}
+
+.dropdown-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-content label {
+  display: block;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-content label:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-content input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media only screen and (min-width: 425px){
+    .materi{
+        display: inline-block;
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        margin-left: 9%;
+        width: 315px;
+        padding: 15px;
+    }
+}

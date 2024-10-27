@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Pembelajaran</title>
+    <script type="module" src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+    <link rel="stylesheet" href="css/HTML Container.css">
+</head>
+<body>
+    <div id="header">
+        <img src="Images/Logo.png" alt="" onclick="location.href='index.html';">
+        <div id="buttonRight" style="height: 45px;">
+            <img src="Images/notifications.png" alt="" >
+            <img src="Images/Burger.png" alt="">
+        </div>
+    </div>
+
+    <div class="teks">
+        <h2>HTML Container</h2>
+        <p>HTML container adalah elemen yang digunakan untuk mengelompokkan atau membungkus elemen-elemen lain dalam sebuah halaman web. Fungsinya untuk mengatur tata letak, menyusun struktur, dan memberikan gaya pada grup elemen yang dibungkusnya. HTML container membantu pengembang web dalam mengorganisir konten agar lebih mudah dikelola, baik untuk tujuan visual maupun fungsional.</p>
+
+        <ul>
+            <li class="number" style="font-weight: 600;">
+                <h4>HTML dibentuk oleh elemen-elemen yang terdiri dari:</h4>
+            </li>
+            <p>&lt;div> (singkatan dari "division") adalah salah satu elemen paling umum dalam HTML yang digunakan sebagai container untuk membungkus elemen-elemen HTML lainnya. Elemen ini bersifat block-level, yang berarti akan menempati seluruh lebar layar dan dimulai pada baris baru.<br>Fungsi utama dari &lt;div> adalah untuk mengelompokkan elemen-elemen HTML lain (seperti teks, gambar, tabel, form, dll.) ke dalam satu wadah atau blok. Ini memudahkan pengaturan tata letak dan gaya tampilan menggunakan CSS. Dalam konteks tata letak, &lt;div> sering digunakan sebagai container untuk membantu mengorganisir struktur halaman web.<br>Contoh Penggunaan &lt;div> sebagai Container:</p>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code">&lt;!DOCTYPE html>
+&lt;html>
+    &lt;style>
+        div {
+            background-color: #FFF4A3;
+        }
+    &lt;/style>
+    &lt;body>
+        &lt;h1>HTML DIV Example&lt;/h1>
+​
+        &lt;div>
+            &lt;h2>London&lt;/h2>
+            &lt;p>London is the capital of England&lt;/p>
+            &lt;p>London has over 13 million inhabitants&lt;/p>
+        &lt;/div>
+        &lt;p>The yellow background is added to demonstrate the footprint of the DIV element.&lt;/p>
+    &lt;/body>
+&lt;/html></code>
+</deckgo-highlight-code>
+
+        <p>Hasil pada browser:</p>
+        <div class="hasil">
+            <iframe srcdoc='
+                <style>
+                    div {
+                        background-color: #FFF4A3;
+                    }
+                </style>
+                <body>
+                    <h1>HTML DIV Example</h1>
+                    <div>
+                        <h2>London</h2>
+                        <p>London is the capital of England</p>
+                        <p>London has over 13 million inhabitants</p>
+                    </div>
+                    <p>The yellow background is added to demonstrate the footprint of the DIV element.</p>
+                </body>
+                '>
+            </iframe>
+        </div>
+            <p>Dalam contoh ini, elemen heading &lt;h1> dan dua elemen paragraf &lt;p> dibungkus oleh &lt;div>. Hal ini membuatnya lebih mudah untuk diatur tata letaknya secara keseluruhan dengan CSS.</p>
+        <li class="number" style="font-weight: 600;">
+            <h4>HTML dibentuk oleh elemen-elemen yang terdiri dari:</h4>
+        </li>
+        <p>Class adalah atribut yang digunakan untuk memberi nama pada satu atau lebih elemen HTML. Nama class digunakan untuk mengelompokkan beberapa elemen yang berbeda, sehingga memungkinkan kita untuk memberikan gaya atau tata letak yang sama kepada elemen-elemen tersebut.</p>
+        <p>Dengan menggunakan class, elemen-elemen HTML yang dikelompokkan dalam sebuah div atau elemen lain dapat diatur secara seragam dalam desain dan tata letak.</p>
+        <p>Kegunaan class:</p>
+            <ul>
+                <li><p>Mengelompokkan elemen yang memiliki gaya atau fungsi yang sama.</p></li>
+                <li><p>Memudahkan penerapan gaya (CSS) pada beberapa elemen sekaligus.</p></li>
+                <li><p>Dapat digunakan di banyak elemen pada satu halaman HTML.</p></li>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+    <code slot="code">&lt;!DOCTYPE html>
+&lt;html>
+    &lt;head>
+        &lt;style>
+            .city {
+                background-color: tomato;
+                color: white;
+                border: 2px solid black;
+                margin: 20px;
+                padding: 20px;
+            }
+        &lt;/style>
+    &lt;/head>
+    &lt;body>
+        &lt;div class="city">
+            &lt;h2>London&lt;/h2>
+            &lt;p>London is the capital of England.&lt;/p>
+        &lt;/div>
+​
+        &lt;div class="city">
+            &lt;h2>Paris&lt;/h2>
+            &lt;p>Paris is the capital of France.&lt;/p>
+        &lt;/div>
+​
+        &lt;div class="city">
+            &lt;h2>Tokyo&lt;/h2>
+            &lt;p>Tokyo is the capital of Japan.&lt;/p>
+        &lt;/div>
+    &lt;/body>
+&lt;/html></code>
+</deckgo-highlight-code>
+                <p>Hasil pada browser:</p>
+                <iframe srcdoc='
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <style>
+                            .city {
+                                background-color: tomato;
+                                color: white;
+                                border: 2px solid black;
+                                margin: 20px;
+                                padding: 20px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="city">
+                            <h2>London</h2>
+                            <p>London is the capital of England.</p>
+                        </div>
+                ​
+                        <div class="city">
+                            <h2>Paris</h2>
+                            <p>Paris is the capital of France.</p>
+                        </div>
+                ​
+                        <div class="city">
+                            <h2>Tokyo</h2>
+                            <p>Tokyo is the capital of Japan.</p>
+                        </div>
+                    </body>
+                </html>'>
+            </iframe>
+            <p>Dengan penggunaan class="section", kedua &lt;div> tersebut memiliki gaya yang sama: latar belakang biru muda, padding 20px, dan margin antar blok 10px.</p>
+            </ul>
+            <li class="number" style="font-weight: 600;">
+                <h4>Penggunaan id dalam HTML</h4>
+            </li>
+            <p>id adalah atribut yang digunakan untuk mengidentifikasi elemen HTML secara unik. Setiap elemen yang memiliki id harus memiliki nilai yang unik di seluruh halaman web, sehingga tidak boleh ada dua elemen yang memiliki id yang sama.</p>
+            <p>Kegunaan id:</p>
+            <ul>
+                <li><p>Memberikan identitas unik pada elemen tertentu.</p></li>
+                <li><p>Digunakan untuk mengatur satu elemen secara khusus dengan CSS atau memanipulasi elemen tersebut menggunakan JavaScript.</p></li>
+                <li><p>Tidak seperti class, id hanya bisa digunakan satu kali pada halaman yang sama.</p></li>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+<code slot="code">&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+&lt;style>
+.city {
+    background-color: tomato;
+    color: white;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class="city">
+&lt;h2>London&lt;/h2>
+&lt;p>London is the capital of England.&lt;/p>
+&lt;/div>
+​
+&lt;div class="city">
+&lt;h2>Paris&lt;/h2>
+&lt;p>Paris is the capital of France.&lt;/p>
+&lt;/div>
+​
+&lt;div class="city">
+&lt;h2>Tokyo&lt;/h2>
+&lt;p>Tokyo is the capital of Japan.&lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;/html></code>
+</deckgo-highlight-code>
+                <p>Hasil pada browser:</p>
+                <iframe srcdoc='
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <style>
+                            #myHeader {
+                                background-color: lightblue;
+                                color: black;
+                                padding: 40px;
+                                text-align: center;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <h2>The id Attribute</h2>
+                        <p>Use CSS to style an element with the id "myHeader":</p>
+                        <h1 id="myHeader">My Header</h1>
+                    </body>
+                </html>
+                '></iframe>
+            </ul>
+            <li class="number" style="font-weight: 600;">
+                <h4>&lt;div>, class, dan id Sebagai Container</h4>
+            </li>
+            <p>Elemen &lt;div>, bersama dengan class dan id, sering disebut sebagai container dalam konteks web development. Fungsi utamanya adalah membungkus elemen-elemen HTML agar bisa diatur dan dikelola secara lebih terstruktur. Elemen-elemen yang dibungkus di dalam &lt;div> dapat dengan mudah diposisikan, dihias, dan disusun dengan CSS.</p>
+            <p>Perbedaan Antara class dan id:</p>
+                <ul>
+                    <li><p>class digunakan untuk mengelompokkan beberapa elemen yang memiliki karakteristik yang sama. Anda bisa menggunakan satu class untuk banyak elemen.</p></li>
+                    <li><p>id digunakan untuk mengidentifikasi satu elemen tertentu. Nilai id harus unik dalam satu halaman, sehingga hanya bisa digunakan sekali.</p></li>
+                    <div class="table-wrapper">
+                        <table>
+                            <tr>
+                                <th>Fitur</th>
+                                <th>Class</th>
+                                <th>Id</th>
+                            </tr>
+                            <tr>
+                                <td>Penggunaan</td>
+                                <td>Untuk banyak elemen</td>
+                                <td>Untuk satu elemen</td>
+                            </tr>
+                            <tr>
+                                <td>Sintaks CSS</td>
+                                <td>.nama-class</td>
+                                <td>#nama-id</td>
+                            </tr>
+                            <tr>
+                                <td>Unik atau tidak?</td>
+                                <td>Tidak perlu unik, bisa digunakan berkali-kali</td>
+                                <td>Harus unik dalam satu halaman</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>Contoh Penggunaan &lt;div>, class, dan id sebagai Container:</p>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+<code slot="code">&lt;!DOCTYPE html>
+&lt;html>
+    &lt;head>
+        &lt;style>
+            /* elemen dengan id "myHeader" */
+            #myHeader {
+              background-color: lightblue;
+              color: black;
+              padding: 40px;
+              text-align: center;
+            }
+
+            /* Style semua elemen dengan nama kelas "city" */
+            .city {
+              background-color: tomato;
+              color: white;
+              padding: 10px;
+            }
+        &lt;/style>
+    &lt;/head>
+    &lt;body>
+        <!-- Elemen dengan id unik -->
+        &lt;h1 id="myHeader">My Cities&lt;/h1>
+
+        <!-- Beberapa elemen dengan kelas yang sama -->
+        &lt;h2 class="city">London&lt;/h2>
+        &lt;p>London is the capital of England.&lt;/p>
+        
+        &lt;h2 class="city">Paris&lt;/h2>
+        &lt;p>Paris is the capital of France.&lt;/p>
+        
+        &lt;h2 class="city">Tokyo&lt;/h2>
+        &lt;p>Tokyo is the capital of Japan.&lt;/p>
+    &lt;/body>
+&lt;/html></code>
+</deckgo-highlight-code>
+                    <p>Hasil pada browser:</p>
+                    <iframe srcdoc='
+                    <!DOCTYPE html>
+                    <html>
+                        <head>
+                            <style>
+                                /* elemen dengan id "myHeader" */
+                                #myHeader {
+                                  background-color: lightblue;
+                                  color: black;
+                                  padding: 40px;
+                                  text-align: center;
+                                }
+                            
+                                /* Style semua elemen dengan nama kelas "city" */
+                                .city {
+                                  background-color: tomato;
+                                  color: white;
+                                  padding: 10px;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <!-- Elemen dengan id unik -->
+                            <h1 id="myHeader">My Cities</h1>
+                        
+                            <!-- Beberapa elemen dengan kelas yang sama -->
+                            <h2 class="city">London</h2>
+                            <p>London is the capital of England.</p>
+
+                            <h2 class="city">Paris</h2>
+                            <p>Paris is the capital of France.</p>
+
+                            <h2 class="city">Tokyo</h2>
+                            <p>Tokyo is the capital of Japan.</p>
+                        </body>
+                    </html>'>
+                    </iframe>
+                    <p>Misalnya kita ingin membuat halaman web yang memiliki header, konten, dan footer. Berikut adalah cara membungkus elemen-elemen HTML tersebut dalam sebuah container &lt;div></p>
+                </ul>
+
+
+            <li class="number" style="font-weight: 600;">
+                <h4 style="font-style: 600;">Studi Kasus Penggunaan &lt;div>, class, dan id dalam Halaman Web</h4>
+            </li>
+            <p>Contoh: Misalkan kita sedang membuat halaman web untuk media pembelajaran interaktif, dan ingin membuat layout yang terdiri dari header, konten utama, dan footer. </p>
+            <p>Berikut ini contoh implementasi:</p>
+<deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+<code slot="code">&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;title>Media Pembelajaran&lt;/title>
+    
+    <!-- Style CSS dimulai -->
+    &lt;style>
+        #header {
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+​
+        .content {
+            padding: 20px;
+        }
+​
+        .section {
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+​
+        #footer {
+            background-color: lightgray;
+            text-align: center;
+            padding: 10px;
+        }
+    &lt;/style>
+&lt;/head>
+&lt;body>
+    &lt;div id="header">
+        &lt;h1>Media Pembelajaran Interaktif&lt;/h1>
+    &lt;/div>
+​
+    &lt;div class="content">
+        &lt;div class="section">
+            &lt;h2>Materi 1: Pengantar HTML&lt;/h2>
+            &lt;p>Ini adalah materi pengantar tentang HTML.&lt;/p>
+        &lt;/div>
+​
+        &lt;div class="section">
+            &lt;h2>Materi 2L Dasar-dasar CSS&lt;/h2>
+            &lt;p>Ini adalah materi pengantar tentang CSS.&lt;/p>
+        &lt;/div>
+    &lt;/div>
+​
+    &lt;div id="footer">
+        &lt;p>&copy; 2024 Media Pembelajaran&lt;/p>
+    &lt;/div>
+&lt;/body>
+&lt;/html></code>
+</deckgo-highlight-code>
+            <p>Hasil pada browser:</p>
+            <iframe srcdoc='
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Media Pembelajaran</title>
+                
+                <!-- Style CSS dimulai -->
+                <style>
+                    #header {
+                        background-color: darkblue;
+                        color: white;
+                        text-align: center;
+                        padding: 20px;
+                    }
+            ​
+                    .content {
+                        padding: 20px;
+                    }
+            ​
+                    .section {
+                        background-color: lightblue;
+                        padding: 10px;
+                        margin-bottom: 15px;
+                    }
+            ​
+                    #footer {
+                        background-color: lightgray;
+                        text-align: center;
+                        padding: 10px;
+                    }
+                </style>
+            </head>
+            <body>
+                <div id="header">
+                    <h1>Media Pembelajaran Interaktif</h1>
+                </div>
+            ​
+                <div class="content">
+                    <div class="section">
+                        <h2>Materi 1: Pengantar HTML</h2>
+                        <p>Ini adalah materi pengantar tentang HTML.</p>
+                    </div>
+            ​
+                    <div class="section">
+                        <h2>Materi 2L Dasar-dasar CSS</h2>
+                        <p>Ini adalah materi pengantar tentang CSS.</p>
+                    </div>
+                </div>
+            ​
+                <div id="footer">
+                    <p>&copy; 2024 Media Pembelajaran</p>
+                </div>
+            </body>
+            </html>'></iframe>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <img src="Images/Tombol.svg" alt="kiri" onclick="location.href='Pengenalan HTML.html';">
+        <h4>HTML Container</h4>
+        <img src="Images/Tombol-kanan.svg" alt="kanan" onclick="location.href='Text editor dan Browser.html';">
+    </div>
+</body>
+</html>
