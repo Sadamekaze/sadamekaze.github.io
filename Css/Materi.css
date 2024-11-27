@@ -1,0 +1,23 @@
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 1em;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+  border: 2px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f5f5f5;
+  padding-right: 70px;
+  font-weight: bold;
+}

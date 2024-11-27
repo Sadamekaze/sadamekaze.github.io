@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Pembelajaran</title>
+    <link rel="stylesheet" href="Css/General.css">
+    <link rel="stylesheet" href="Css/Header.css">
+    <link rel="stylesheet" href="Css/Navbar.css">
+    <link rel="stylesheet" href="Css/Materi.css">
+    <script type="module" src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+</head>
+<body>
+    <header>
+        <img src="Images/Logo.png" alt="">
+        <div class="right-menu-header">
+            <img src="Images/notifications.png" alt="">
+            <img src="Images/Burger.svg" alt="">
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <section class="HTML-Multimedia">
+                <h2>HTML Multimedia</h2>
+                <p>HTML Multimedia mengacu pada elemen-elemen dalam HTML yang digunakan untuk menampilkan atau menyematkan konten media seperti gambar, audio, video, dan konten interaktif di halaman web. Elemen-elemen multimedia ini penting untuk memperkaya pengalaman pengguna dengan menambahkan konten visual dan suara yang mendukung informasi atau hiburan</p>
+                <ol>
+                    <section class="Menampilkan-Video">
+                        <li class="semi-bold">Menampilkan Video</li>
+                        <p>HTML menyediakan tag &lt;video> untuk menyematkan video ke halaman web. Video dapat berasal dari file lokal atau sumber eksternal.</p>
+                        <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                            <code slot="code"><!DOCTYPE html>
+                                &lt;html>
+                                &numsp;&numsp;&numsp;&numsp;&lt;body>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;h1>Contoh Menampilkan Video&lt;/h1>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;video width="320" height="240" autoplay controls loop>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;source src="movie.mp4" type="video/mp4">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;Yout browser does not support the video tag.
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/video>
+                                &numsp;&numsp;&numsp;&numsp;&lt;/body>
+                                &lt;/html></code>
+                        </deckgo-highlight-code>
+                        <p>Hasil pada browser:</p>
+                        <iframe srcdoc='<!DOCTYPE html>
+                            <html>
+                                <body>
+                                    <h1>Contoh Menampilkan Video</h1>
+                                    <video width="320" height="240" autoplay controls loop>
+                                        <source src="Video/An Island full of bananas (Honkai Star Rail).mp4" type="video/mp4">
+                                        Yout browser does not support the video tag.
+                                    </video>
+                                </body>
+                            </html>' frameborder="0"></iframe>
+                            <ul>
+                                <li>controls menampilkan kontrol video seperti play, pause, dll.</li>
+                                <li>width menentukan lebar video.</li>
+                                <li>height menentukan tinggi video.</li>
+                                <li>&lt;source> digunakan untuk menentukan sumber video dan formatnya.</li>
+                            </ul>
+                    </section>
+
+                    <section class="Menampilkan-Audio">
+                        <li class="semi-bold">Menampilkan Audio</li>
+                        <p>Untuk menambahkan audio ke halaman web, kita menggunakan tag &lt;audio>. Seperti video, audio juga bisa berasal dari file lokal atau URL eksternal.</p>
+                        <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                            <code slot="code"><!DOCTYPE html>
+                                &lt;html>
+                                    &lt;body>
+                                        &lt;h1>Contoh Menampilkan Audio&lt;/h1>
+                                        &lt;audio controls>
+                                            &lt;source src="audio.mp3" type="audio/mp3">
+                                            Your browser does not support the audio element.
+                                        &lt;/audio>
+                                    &lt;/body>
+                                &lt;/html></code>
+                        </deckgo-highlight-code>
+                        <p>Hasil pada browser:</p>
+                        <iframe srcdoc='<!DOCTYPE html>
+                            <html>
+                                <body>
+                                    <h1>Contoh Menampilkan Audio</h1>
+                                    <audio controls>
+                                        <source src="Audio/audio.mp3" type="audio/mp3">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </body>
+                            </html>' frameborder="0"></iframe>
+                    </section>
+                </ol>
+            </section>
+
+
+            <section class="Iframe">
+                <h2>Iframe</h2>
+                <p>iframe (inline frame) adalah elemen HTML yang digunakan untuk menyematkan atau menampilkan konten dari sumber eksternal ke dalam sebuah halaman web. Konten tersebut bisa berupa halaman web lain, video, dokumen, peta, atau konten interaktif lainnya.</p>
+                <p>Tag &lt;iframe> memungkinkan Anda untuk memasukkan sebuah halaman web dalam sebuah bingkai di halaman web lain. Biasanya digunakan untuk menampilkan konten seperti video YouTube, peta Google Maps, atau dokumen online.</p>
+                <ol>
+                    <section class="Struktur-Dasar-iframe"> 
+                        <li class="semi-bold">Struktur Dasar iframe</li>
+                        <p>Berikut adalah struktur dasar penggunaan tag &lt;iframe>:</p>
+                        <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                            <code slot="code">&lt;iframe src="URL" width="lebar" height="tinggi" title="deskripsi ifrrame" allowfullscreen>&lt;/iframe></code>
+                        </deckgo-highlight-code>
+                        <ul>
+                            <li>src:</li>
+                            <p>Atribut ini menentukan URL dari halaman atau konten yang akan disematkan.</p>
+                            <li>width dan height:</li>
+                            <p>Digunakan untuk menentukan lebar dan tinggi iframe dalam piksel.</p>
+                            <li>title:</li>
+                            <p>Atribut ini berguna untuk aksesibilitas, memberikan deskripsi singkat tentang konten iframe.</p>
+                            <li>allowfullscreen:</li>
+                            <p>Menambahkan kemampuan untuk menampilkan iframe dalam mode layar penuh (biasanya untuk video).</p>
+                        </ul>
+                    </section>
+
+                    <section class="Contoh-Penggunaan-iframe">
+                        <li class="semi-bold">Contoh Penggunaan iframe</li>
+                        <ol>
+                            <section class="Video-Youtube">
+                                <li class="semi-bold">Video Youtube</li>
+                                <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                                    <code slot="code"><!DOCTYPE html>
+                                        &lt;html lang="id">
+                                        &lt;head>
+                                        &numsp;&numsp;&numsp;&numsp;&lt;meta charset="UTF-8">
+                                        &numsp;&numsp;&numsp;&numsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        &numsp;&numsp;&numsp;&numsp;&lt;title>Embed Video Youtube&lt;/title>
+                                        &lt;/head>
+                                        &lt;body>
+                                        &numsp;&numsp;&numsp;&numsp;&lt;h1>Contoh Menyematkan Video Youtube&lt;/h1>
+                                        &numsp;&numsp;&numsp;&numsp;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/0Hr8aqGp5mk" title="I Await Sony’s Cease and Desist - PS3 Dev Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>
+                                        &lt;/body>
+                                        &lt;/html></code>
+                                </deckgo-highlight-code>
+                                <p>Iframe ini menyematkan sebuah video dari YouTube. Atribut allowfullscreen memungkinkan video diputar dalam mode layar penuh.</p>
+                                <p>Hasil pada browser:</p>
+                                <iframe srcdoc='<!DOCTYPE html>
+                                    <html lang="id">
+                                    <head>
+                                        <meta charset="UTF-8">
+                                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        <title>Embed Video Youtube</title>
+                                    </head>
+                                    <body>
+                                        <h1>Contoh Menyematkan Video Youtube</h1>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0Hr8aqGp5mk" title="I Await Sony’s Cease and Desist - PS3 Dev Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </body>
+                                    </html>' frameborder="0"></iframe>
+                            </section>
+
+                            <section class="Google-Maps">
+                                <li class="semi-bold">Google Maps</li>
+                                <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                                    <code slot="code"><!DOCTYPE html>
+                                        &lt;html lang="id">
+                                        &lt;head>
+                                        &numsp;&numsp;&numsp;&numsp;&lt;meta charset="UTF-8">
+                                        &numsp;&numsp;&numsp;&numsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        &numsp;&numsp;&numsp;&numsp;&lt;title>Embed Google Maps&lt;/title>
+                                        &lt;/head>
+                                        &lt;body>
+                                        &numsp;&numsp;&numsp;&numsp;&lt;h1>Contoh Menyematkan Google Maps&lt;/h1>
+                                        &numsp;&numsp;&numsp;&numsp;&lt;iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63466.662831620306!2d106.75093514863279!3d-6.1753924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1727505349757!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">&lt;/iframe>
+                                        &lt;/body>
+                                        &lt;/html></code>
+                                </deckgo-highlight-code>
+                                <p>Hasil pada browser:</p>
+                                <iframe srcdoc='<!DOCTYPE html>
+                                    <html lang="id">
+                                    <head>
+                                        <meta charset="UTF-8">
+                                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        <title>Embed Google Maps</title>
+                                    </head>
+                                    <body>
+                                        <h1>Contoh Menyematkan Google Maps</h1>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63466.662831620306!2d106.75093514863279!3d-6.1753924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1727505349757!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </body>
+                                    </html>' frameborder="0"></iframe>
+                                <p>Iframe ini menyematkan peta dari Google Maps dengan lokasi yang ditentukan dalam URL src.</p>
+                            </section>
+
+                            <section class="Geogebra">
+                                <li class="semi-bold">Geogebra</li>
+                                <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                                    <code slot="code"><!DOCTYPE html>
+                                        &lt;html lang="id">
+                                        &lt;head>
+                                        &numsp;&numsp;&numsp;&numsp;&lt;meta charset="UTF-8">
+                                        &numsp;&numsp;&numsp;&numsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        &numsp;&numsp;&numsp;&numsp;&lt;title>Embed Aplikasi Geogebra&lt;/title>
+                                        &lt;/head>
+                                        &lt;body>
+                                        &numsp;&numsp;&numsp;&numsp;&lt;h1>Contoh Menyematkan Aplikasi Geogebra&lt;/h1>
+                                        &numsp;&numsp;&numsp;&numsp;&lt;iframe src="https://www.geogebra.org/classic/kc7nezdh" width="400" height="300" allowfullscreen style="border:0;">&lt;/iframe>
+                                        &lt;/body>
+                                        &lt;/html></code>
+                                </deckgo-highlight-code>
+                                <p>Hasil pada browser:</p>
+                                <iframe srcdoc='<!DOCTYPE html>
+                                    <html lang="id">
+                                    <head>
+                                        <meta charset="UTF-8">
+                                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        <title>Embed Aplikasi Geogebra</title>
+                                    </head>
+                                    <body>
+                                        <h1>Contoh Menyematkan Aplikasi Geogebra</h1>
+                                        <iframe src="https://www.geogebra.org/classic/kc7nezdh" width="400" height="300" allowfullscreen style="border:0;"></iframe>
+                                    </body>
+                                    </html>' frameborder="0"></iframe>
+                                <p>Iframe ini menyematkan aplikasi interaktif dari Geogebra, yang bisa digunakan untuk menampilkan grafik matematika atau simulasi.</p>
+                            </section>
+
+                            <section class="Atribut-Tambahan-pada-&lt;iframe>">
+                                <p>Selain atribut dasar seperti src, width, dan height, berikut beberapa atribut tambahan yang bisa digunakan untuk mengendalikan perilaku iframe:</p>
+                                <ul>
+                                    <li>frameborder="0": Menghilangkan border di sekitar iframe.</li>
+                                    <li>allowfullscreen: Mengizinkan iframe masuk ke mode layar penuh (digunakan khusus untuk konten video).</li>
+                                    <li>loading="lazy": Menunda pemuatan iframe sampai iframe mendekati viewport, untuk meningkatkan kinerja.</li>
+                                </ul>
+                                <p>sandbox: Membatasi fungsionalitas iframe. Bisa digunakan untuk meningkatkan keamanan.</p>
+                            </section>
+                        </ol>
+                    </section>
+
+                    <section class="Keamanan-Iframe:-Atribut-sandbox">
+                        <li class="semi-bold">Keamanan Iframe: Atribut sandbox</li>
+                        <p>Atribut sandbox dapat digunakan untuk memberikan perlindungan keamanan saat menyematkan konten dari sumber eksternal. Ini membatasi kemampuan iframe untuk menjalankan skrip, memodifikasi konten, atau melakukan tindakan tertentu.</p>
+                        <p>Contoh penggunaan:</p>
+                        <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                            <code slot="code">&lt;iframe src="https://example.com" sandbox>&lt;/iframe></code>
+                        </deckgo-highlight-code>
+                        <p>Hasil pada browser:</p>
+                        <iframe srcdoc='<iframe src="https://example.com" sandbox></iframe>' frameborder="0"></iframe>
+                        <p>Anda juga bisa menyesuaikan apa yang diizinkan dengan menambahkan nilai tertentu ke atribut sandbox, misalnya:</p>
+                        <ul>
+                            <li>sandbox="allow-scripts": Mengizinkan skrip dijalankan di dalam iframe.</li>
+                        </ul>
+                    </section>
+                </ol>
+            </section>
+        </article>
+    </main>
+
+    <nav>
+        <a href="HTML Form.html" class="kiri"><img src="Images/Tombol.svg" alt=""></a>
+        <h4>HTML Multimedia</h4>
+        <a href="Evaluasi.html" class="kanan"><img src="Images/Tombol-kanan.svg" alt=""></a>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Pembelajaran</title>
+    <link rel="stylesheet" href="Css/General.css">
+    <link rel="stylesheet" href="Css/Header.css">
+    <link rel="stylesheet" href="Css/Navbar.css">
+    <link rel="stylesheet" href="Css/Hasil.css">
+    <script src="soal.js"></script>
+    <script>
+        window.onload = function(){
+            console.log(abcde)
+            console.log(abcdeBenar);
+            let benarTotal = 0;
+            let salahTotal = 0;
+            for (var key in abcde){
+                if(abcde[key] === abcdeBenar[key]){
+                    var soalButton = document.querySelector(`.${key.replace(" ","-")} label[for="${abcde[key]}"]`);
+                    soalButton.style.backgroundColor = 'green';
+                    soalButton.style.color = "white";
+                    benarTotal++;
+                    } else{
+                        if(abcde[key] != null)
+                        {
+                            var soalButtonSalah = document.querySelector(`.${key.replace(" ","-")} label[for="${abcde[key]}"]`);
+                            soalButtonSalah.style.backgroundColor = 'red';
+                            soalButtonSalah.style.color = "white";
+                            salahTotal++;
+                        }
+
+                        if(abcde[key] != null)
+                        {
+                            var soalButtonBenar = document.querySelector(`.${key.replace(" ","-")} label[for="${abcdeBenar[key]}"]`);
+                            soalButtonBenar.style.backgroundColor = 'green';
+                            soalButtonBenar.style.color = "white";
+                        }
+                    }
+                }
+            let benarSoal = document.getElementById("benar")
+            benarSoal.innerText = `Kamu benar: ${benarTotal} dan Salah: ${salahTotal}\nNilai kamu: ${benarTotal*5}`
+            };
+    </script>
+</head>
+<body>
+    <header>
+        <img src="Images/Logo.png" alt="">
+        <div class="right-menu-header">
+            <img src="Images/notifications.png" alt="">
+            <img src="Images/Burger.svg" alt="">
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <h2 id="benar">Kamu benar: null dan Salah: null<br>Nilai kamu: null</h2>
+            <ol>
+                <li class="soal-1">
+                    <section class="soal">
+                        <h4>Fitur apa yang membantu pengguna dalam menulis kode lebih cepat dengan memberikan saran atau menyelesaikan kode secara otomatis?</h4>
+                    </section>
+
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">&lt;table></label>
+                    
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">&lt;tr></label>
+                    
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">&lt;th></label>
+                    
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">&lt;td></label>
+                    
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">&lt;thead></label>
+                    </section>
+                </li>
+
+                <li class="soal-2">
+                    <section class="soal">
+                        <h4>Fitur apa yang membantu pengguna dalam menulis kode lebih cepat dengan memberikan saran atau menyelesaikan kode secara otomatis?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">Highlighting Syntax</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">Auto-completion</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">Multi-language Support</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">Plugins & Extensions</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">Version Control Integration</label>
+                    </section>
+                </li>
+                
+                <li class="soal-3">
+                    <section class="soal">
+                        <h4>Manakah dari pilihan berikut yang bukan merupakan contoh text editor?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">Visual Studio Code</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">Microsoft Edge</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">Sublime Text</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">Notepad++</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">Vim</label>
+                    </section>
+                </li>
+                
+                <li class="soal-4">
+                    <section class="soal">
+                        <h4>Fitur apa yang biasanya ditambahkan pada text editor untuk mendukung pengembangan dan debugging?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">Plugins & Extensions</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">Kompresi data otomatis</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">Enkripsi file</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">Pemutaran media</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">Penyimpanan cloud</label>
+                    </section>
+                </li>
+                
+                <li class="soal-5">
+                    <section class="soal">
+                        <h4>Apa kepanjangan dari HTML?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">Hyper Text Make Language</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">Hyper Tool Markup Language</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">Hyper Text Markup Language</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">Hyperlink Text Markup Language</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">Hyper Text Manual Language</label>
+                    </section>
+                </li>
+                
+                <li class="soal-6">
+                    <section class="soal">
+                        <h4>Tag HTML apa yang digunakan untuk membuat paragraf?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">&lt;head></label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">&lt;p></label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">&lt;h1></label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">&lt;div></label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">&lt;footer></label>
+                    </section>
+                </li>
+                
+                <li class="soal-7">
+                    <section class="soal">
+                        <h4>Tag &lt;br> dalam HTML digunakan untuk:</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">Menambahkan garis horizontal</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">Memasukkan baris baru</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">Mengatur teks menjadi tebal</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">Menambahkan gambar</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">Membuat tautan</label>
+                    </section>
+                </li>
+                
+                <li class="soal-8">
+                    <section class="soal">
+                        <h4>Manakah dari tag berikut yang digunakan untuk membuat hyperlink di HTML?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">&lt;a></label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">&lt;link></label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">&lt;img></label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">&lt;h2></label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">&lt;button></label>
+                    </section>
+                </li>
+                
+                <li class="soal-9">
+                    <section class="soal">
+                        <h4>Apa fungsi dari elemen HTML container seperti &lt;div>?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">Mengatur struktur halaman dengan membagi konten menjadi blok</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">Menambahkan gambar ke dalam halaman web</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">Mengatur warna teks pada halaman web</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">Mengatur ukuran font pada paragraf</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">Membuat tabel dalam halaman web</label>
+                    </section>
+                </li>
+                
+                <li class="soal-10">
+                    <section class="soal">
+                        <h4>Bagaimana cara menambahkan komentar dalam kode HTML?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">&lt;!-- Ini adalah komentar --></label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">// Ini adalah komentar</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">/* Ini adalah komentar */</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan"># Ini adalah komentar</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">>> Ini adalah komentar</label>
+                    </section>
+                </li>
+                
+                <li class="soal-11">
+                    <section class="soal">
+                        <h4>Apa tujuan penggunaan atribut "id" dalam HTML?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">Memberikan identitas unik kepada sebuah elemen</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">Mengatur tata letak elemen secara keseluruhan</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">Menerapkan gaya yang sama pada beberapa elemen</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">Menambahkan teks di dalam sebuah elemen</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">Menampilkan gambar pada halaman web</label>
+                    </section>
+                </li>
+                
+                <li class="soal-12">
+                    <section class="soal">
+                        <h4>Dalam konteks web development, elemen &lt;div>, class, dan id sering disebut sebagai apa?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">Selector</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">Property</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">Container</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">Layout</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">Framework</label>
+                    </section>
+                </li>
+                
+                <li class="soal-13">
+                    <section class="soal">
+                        <h4>Apa fungsi utama dari elemen &lt;form> dalam HTML?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">Menampilkan gambar di halaman web</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">Memutar video di halaman web</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">Mengumpulkan data dari pengguna</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">Menampilkan teks dengan format tertentu</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">Membuat tabel di halaman web</label>
+                    </section>
+                </li>
+                
+                <li class="soal-14">
+                    <section class="soal">
+                        <h4>Atribut HTML apa yang digunakan untuk menetapkan link pada elemen seperti &lt;a></h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">href</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">src</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">alt</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">class</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">id</label>
+                    </section>
+                </li>
+                
+                <li class="soal-15">
+                    <section class="soal">
+                        <h4>Tag HTML mana yang digunakan untuk membuat daftar bernomor?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">&lt;ul></label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">&lt;ol></label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">&lt;li></label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">&lt;dl></label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">&lt;table></label>
+                    </section>
+                </li>
+                
+                <li class="soal-16">
+                    <section class="soal">
+                        <h4>Elemen HTML apa yang digunakan untuk menyematkan video dari sumber eksternal atau lokal ke dalam halaman web?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">&lt;audio></label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">&lt;iframe></label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">&lt;video></label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">&lt;source></label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">&lt;embed></label>
+                    </section>
+                </li>
+                
+                <li class="soal-17">
+                    <section class="soal">
+                        <h4>Manakah dari atribut berikut yang TIDAK termasuk dalam atribut dasar tag &lt;iframe>?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">src</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">width</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">height</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">autoplay</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">title</label>
+                    </section>
+                </li>
+                
+                <li class="soal-18">
+                    <section class="soal">
+                        <h4>Manakah tag yang tepat untuk menambahkan audio ke halaman web?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">&lt;audio></label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">&lt;sound></label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">&lt;music></label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">&lt;media></label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">&lt;iframe></label>
+                    </section>
+                </li>
+                
+                <li class="soal-19">
+                    <section class="soal">
+                        <h4>Apa kegunaan atribut src pada tag &lt;iframe>?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">Menentukan lebar iframe</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">Menentukan tinggi iframe</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">Menentukan URL sumber konten yang akan disematkan</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">Memberikan deskripsi singkat tentang konten iframe</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">Menambahkan kemampuan layar penuh</label>
+                    </section>
+                </li>
+                
+                <li class="soal-20">
+                    <section class="soal">
+                        <h4>Apa fungsi dari atribut autoplay pada tag &lt;video>?</h4>
+                    </section>
+                
+                    <section class="pilihan-ganda">
+                        <input type="radio" id="pilihan-a" name="pilihan"hidden disabled>
+                        <label for="pilihan-a" class="pilihan">Menyembunyikan elemen video</label>
+                
+                        <input type="radio" id="pilihan-b" name="pilihan"hidden disabled>
+                        <label for="pilihan-b" class="pilihan">Menampilkan kontrol video seperti play, pause, volume, dll.</label>
+                
+                        <input type="radio" id="pilihan-c" name="pilihan" hidden disabled>
+                        <label for="pilihan-c" class="pilihan">Mengatur sumber file video</label>
+                
+                        <input type="radio" id="pilihan-d" name="pilihan"hidden disabled>
+                        <label for="pilihan-d" class="pilihan">Menentukan jenis file video</label>
+                
+                        <input type="radio" id="pilihan-e" name="pilihan" hidden disabled>
+                        <label for="pilihan-e" class="pilihan">Memutar video secara otomatis</label>
+                    </section>
+                </li>                
+            </ol>
+        </article>
+    </main>
+
+    <nav class="navigation">
+        <a href="Evaluasi.html" style="visibility: hidden;"><img src="Images/Tombol.svg" alt="kiri"></a>
+        <h4>Hasil</h4>
+        <a href="index.html"><img src="Images/Tombol-kanan.svg" alt="kanan"></a>
+    </nav>
+</body>
+</html>

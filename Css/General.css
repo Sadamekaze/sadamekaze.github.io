@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand';
+}
+
+deckgo-highlight-code {
+    --deckgo-highlight-code-white-space: normal;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+iframe{
+    width: 100%;
+    height: 300px;
+    border: 2px solid #ccc;
+}
+
+main{
+    margin: 0 9%;
+}
+
+.semi-bold{
+    font-weight: 600;
+}
+
+article{
+    margin-top: 15px;
+    margin-bottom: 80px;
+}
+
+ul, ol{
+    margin-left: 20px;
+}
+

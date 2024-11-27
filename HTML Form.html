@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Pembelajaran</title>
+    <link rel="stylesheet" href="Css/General.css">
+    <link rel="stylesheet" href="Css/Header.css">
+    <link rel="stylesheet" href="Css/Navbar.css">
+    <link rel="stylesheet" href="Css/Materi.css">
+    <script type="module" src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+</head>
+<body>
+    <header>
+        <img src="Images/Logo.png" alt="">
+        <div class="right-menu-header">
+            <img src="Images/notifications.png" alt="">
+            <img src="Images/Burger.svg" alt="">
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <section class="HTML-Form">
+                <h2>HTML Form</h2>
+                <p>HTML Form adalah elemen dalam HTML yang digunakan untuk mengumpulkan data dari pengguna dan mengirimkannya ke server untuk diproses. Elemen ini biasanya digunakan pada halaman web untuk membuat fitur interaktif, seperti kotak pencarian, login, pendaftaran, atau pengumpulan data lainnya.</p>
+            </section>
+
+            <section class="Elemen-&lt;form>">
+                <h2>Elemen &lt;form></h2>
+                <p>Elemen utama yang digunakan untuk membuat formulir.</p>
+                <p>Atribut penting: action (URL untuk mengirim data formulir), method (metode pengiriman data: GET atau POST).</p>
+                <p>action adalah URL untuk mengirim data formulir dan menentukan aksi yang akan dilakukan saat data dikirim</p>
+                <p>method metode pengiriman data.</p>
+                <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                    <code slot="code">&lt;form action="proses.php" method="GET">
+                        &numsp;&numsp;&numsp;&numsp;<!-- form field di sini -->
+                        &lt;/form></code>
+                </deckgo-highlight-code>
+                <p>Untuk atribut action, kita dapat mengisinya dengan alaman URL dari endpoint yang akan memproses form.Secara sederhana,—pada contoh di atas— kita akan menyuruh file proses.php untuk memproses data form.Ini nanti akan kita pelajari pada PHP.</p>
+            </section>
+
+            <section class="Field">
+                <h2>Field</h2>
+                <p>Field adalah ruas yang dapat diisi dengan data.</p>
+                <p>Contoh field:</p>
+                <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                    <code slot="code">&lt;input type="text" name="info"></code>
+                </deckgo-highlight-code>
+                <p>Field memiliki beberapa atribut yang harus diberikan:</p>
+                <ol>
+                    <li>type merupakan type dari field.</li>
+                    <li>name merupakan nama dari field yang akan menjadi kunci dan variabel di dalam program.</li>
+                </ol>
+            </section>
+
+            <section class="Contoh-penggunaan-HTML-Form">
+                <h2>Contoh penggunaan HTML Form</h2>
+                <ol>
+                    <section class="Form-Login">
+                        <li class="semi-bold">Form Login</li>
+                        <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                            <code slot="code"><!DOCTYPE html>
+                                &lt;html>
+                                &numsp;&numsp;&numsp;&numsp;&lt;head>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;title>Form Login&lt;/title>
+                                &numsp;&numsp;&numsp;&numsp;&lt;/head>
+                                &numsp;&numsp;&numsp;&numsp;&lt;body>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;form action="login.php" method="POST">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;fieldset>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;legend>Login&lt;/legend>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>Username:&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;input type="text" name="username" placeholder="username...">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>Password:&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;input type="text" name="password" placeholder="password...">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>&lt;input type="checkbox" name="remember" value="remember">Remember me&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;input type="submit" name="submit" value="Login">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/fieldset>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/form>
+                                &numsp;&numsp;&numsp;&numsp;&lt;/body>
+                                &lt;/html></code>
+                        </deckgo-highlight-code>
+                        <p>Hasil pada browser:</p>
+                        <iframe srcdoc='<!DOCTYPE html>
+                            <html>
+                                <head>
+                                    <title>Form Login</title>
+                                </head>
+                                <body>
+                                    <form action="login.php" method="POST">
+                                        <fieldset>
+                                            <legend>Login</legend>
+                                            <p>
+                                                <label>Username:</label>
+                                                <input type="text" name="username" placeholder="username...">
+                                            </p>
+                                            <p>
+                                                <label>Password:</label>
+                                                <input type="text" name="password" placeholder="password...">
+                                            </p>
+                                            <p>
+                                                <label><input type="checkbox" name="remember" value="remember">Remember me</label>
+                                            </p>
+                                            <p>
+                                                <input type="submit" name="submit" value="Login">
+                                            </p>
+                                        </fieldset>
+                                    </form>
+                                </body>
+                            </html>' frameborder="0"></iframe>
+
+                            <p>Pada kode di atas, kita membuat empat buah filed:</p>
+                            <ol>
+                                <li>input username dengan tipe text;</li>
+                                <li>input password dengan tipe password;</li>
+                                <li>input remember dengan tipe checkbox;</li>
+                                <li>input submit dengan tipe submit;</li>
+                            </ol>
+                            <p>Lalu ketiga filed ini dibungkus ke dalam tag &lt;fieldset>.</p>
+                            <p>Nanti tag &lt;fieldset> ini akan membuat sebuah garis.</p>
+                            <p>Di dalam tag &lt;fieldset>, kita membuat tag &lt;legend> untuk memberikan teks pada fieldset.</p>
+                            <p>Lalu, perhatikan juga atribut yang digunakan pada setiap field.</p>
+                            <ul>
+                                <li>Atribut placeholder untuk menampilkan teks sementara (placeholder);</li>
+                                <li>Atribut value untuk memberikan nilai default pada field.</li>
+                            </ul>
+                            <p>Setiap field kita bungkus dalam tag &lt;p> agar terlihat rapi dan juga kita berikan sebuah label dengan tag &lt;label>.</p>
+                    </section>
+
+                    <section class="Form-Registrasi">
+                        <li class="semi-bold">Form Registrasi</li>
+                        <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                            <code slot="code"><!DOCTYPE html>
+                                &lt;html>
+                                &numsp;&numsp;&numsp;&numsp;&lt;head>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;title>Registrasi&lt;/title>
+                                &numsp;&numsp;&numsp;&numsp;&lt;/head>
+                                &numsp;&numsp;&numsp;&numsp;&lt;body>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;form action="contact.php" method="POST">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;fieldset>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;legend>Registrasi&lt;/legend>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>Nama:&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;input type="text" name="nama" placeholder="Nama lengkap...">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>Username:&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;input type="text" name="username" placeholder="Username...">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>Email:&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;input type="email" name="email" placeholder="Your email...">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>Password&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;input type="password" name="password" placeholder="Password...">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>Jenis kelamin:&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>&lt;input type="radio" name="jenis_kelamin" value="laki-laki">Laki-laki&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>&lt;input type="radio" name="jenis_kelamin" value="perempuan">Perempuan&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>Agama:&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;select name="agama">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;option value="islam">Islam&lt;/option>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;option value="kristen">Kristen&lt;/option>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;option value="hindu">Hindu&lt;/option>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;option value="budha">Budha&lt;/option>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/select>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>Biografi:&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;textarea name="biografi">&lt;/textarea>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;input type="submit" name="submit" value="Daftar">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/fieldset>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/form>
+                                &numsp;&numsp;&numsp;&numsp;&lt;/body>
+                                &lt;/html></code>
+                        </deckgo-highlight-code>
+                        <p>Hasil pada browser:</p>
+                        <iframe srcdoc='<!DOCTYPE html>
+                            <html>
+                                <head>
+                                    <title>Registrasi</title>
+                                </head>
+                                <body>
+                                    <form action="contact.php" method="POST">
+                                        <fieldset>
+                                            <legend>Registrasi</legend>
+                                            <p>
+                                                <label>Nama:</label>
+                                                <input type="text" name="nama" placeholder="Nama lengkap...">
+                                            </p>
+                                            <p>
+                                                <label>Username:</label>
+                                                <input type="text" name="username" placeholder="Username...">
+                                            </p>
+                                            <p>
+                                                <label>Email:</label>
+                                                <input type="email" name="email" placeholder="Your email...">
+                                            </p>
+                                            <p>
+                                                <label>Password</label>
+                                                <input type="password" name="password" placeholder="Password...">
+                                            </p>
+                                            <p>
+                                                <label>Jenis kelamin:</label>
+                                                <label><input type="radio" name="jenis_kelamin" value="laki-laki">Laki-laki</label>
+                                                <label><input type="radio" name="jenis_kelamin" value="perempuan">Perempuan</label>
+                                            </p>
+                                            <p>
+                                                <label>Agama:</label>
+                                                <select name="agama">
+                                                    <option value="islam">Islam</option>
+                                                    <option value="kristen">Kristen</option>
+                                                    <option value="hindu">Hindu</option>
+                                                    <option value="budha">Budha</option>
+                                                </select>
+                                            </p>
+                                            <p>
+                                                <label>Biografi:</label>
+                                                <textarea name="biografi"></textarea>
+                                            </p>
+                                            <p>
+                                                <input type="submit" name="submit" value="Daftar">
+                                            </p>
+                                        </fieldset>
+                                    </form>
+                                </body>
+                            </html>' frameborder="0"></iframe>
+
+                            <p>Pada kode di atas, kita mempelajari tiga buah filed baru:</p>
+                            <ol>
+                                <li>Field Radio</li>
+                                <p>Input bertipe radio digunakan untuk memilih satu opsi dari beberapa pilihan. Pada form, radio button didefinisikan dengan tag &lt;input type="radio">, di mana setiap opsi memiliki nilai yang berbeda, dan hanya satu yang dapat dipilih dalam satu waktu.</p>
+                                <li>Field &lt;select>&lt;option></li>
+                                <p>Kombinasi tag &lt;select> dan &lt;option> digunakan untuk membuat dropdown (menu pilihan). Tag &lt;select> mendefinisikan menu, dan tag &lt;option> menentukan opsi yang tersedia. Pengguna dapat memilih salah satu dari opsi yang ditampilkan.</p>
+                                <li>Field &lt;textearea></li>
+                                <p>Tag &lt;textarea> digunakan untuk membuat area teks yang lebih besar, memungkinkan pengguna untuk memasukkan beberapa baris teks. Ini berbeda dari input tipe text biasa yang hanya menerima satu baris teks.</p>
+                            </ol>
+                            <p>Apa bedanya radio dengan checkbox?</p>
+                            <p>Jika kita ingin agar pengunjung memilih salah satu, maka kita gunakan radio. Tapi kalau kita ingin pengunjung memilih lebih dari satu, maka kita gunakan checkbox. Lalu untuk &lt;select>&lt;/option>, sifatnya sama seperti radio. Cuma dia bentuknya berbeda. Lalu untuk menginputkan teks yang panjang, kita gunakan tag &lt;textarea>.</p>
+                    </section>
+
+                    <section class="Form-Data">
+                        <li class="semi-bold">Form Data</li>
+                        <deckgo-highlight-code language="html" theme="one-light" line-numbers="true">
+                            <code slot="code"><!DOCTYPE html>
+                                &lt;html>
+                                &numsp;&numsp;&numsp;&numsp;&lt;head>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;title>Form Data&lt;/title>
+                                &numsp;&numsp;&numsp;&numsp;&lt;/head>
+                                &numsp;&numsp;&numsp;&numsp;&lt;body>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;form action="contact.php" method="POST">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;fieldset>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;legend>Form Data&lt;/legend>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>Alamat Web:&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;input type="url" name="url" placeholder="Masukan URL Web...">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>Tanggal Lahir:&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;input type="date" name="tanggal_lahir">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;label>Umur:&lt;/label>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;input type="number" name="umur" min="10" max="90">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;input type="submit" name="submit" value="Send">
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/p>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/fieldset>
+                                &numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;&lt;/form>
+                                &numsp;&numsp;&numsp;&numsp;&lt;/body>
+                                &lt;/html></code>
+                        </deckgo-highlight-code>
+                        <p>Hasil pada browser:</p>
+                        <iframe srcdoc='<!DOCTYPE html>
+                            <html>
+                                <head>
+                                    <title>Form Data</title>
+                                </head>
+                                <body>
+                                    <form action="contact.php" method="POST">
+                                        <fieldset>
+                                            <legend>Form Data</legend>
+                                            <p>
+                                                <label>Alamat Web:</label>
+                                                <input type="url" name="url" placeholder="Masukan URL Web...">
+                                            </p>
+                                            <p>
+                                                <label>Tanggal Lahir:</label>
+                                                <input type="date" name="tanggal_lahir">
+                                            </p>
+                                            <p>
+                                                <label>Umur:</label>
+                                                <input type="number" name="umur" min="10" max="90">
+                                            </p>
+                                            <p>
+                                                <input type="submit" name="submit" value="Send">
+                                            </p>
+                                        </fieldset>
+                                    </form>
+                                </body>
+                            </html>' frameborder="0"></iframe>
+                            <p>Pada kode di atas, kita mempeljari tiga buah filed baru:</p>
+                            <ol>
+                                <li>Field URL</li>
+                                <p>Field URL menggunakan &lt;input type="url">, yang memungkinkan pengguna memasukkan sebuah alamat URL (Uniform Resource Locator). Browser secara otomatis akan melakukan validasi untuk memastikan bahwa data yang dimasukkan mengikuti format URL yang benar (misalnya, harus mengandung "http://" atau "https://").</p>
+                                <li>Field Date</li>
+                                <p>Field Date menggunakan &lt;input type="date">, yang memungkinkan pengguna untuk memilih tanggal melalui kalender pop-up yang muncul di browser. Format tanggal yang dimasukkan otomatis sesuai dengan standar (YYYY-MM-DD), dan pengguna tidak perlu mengetiknya secara manual.</p>
+                                <li>Field Number</li>
+                                <p>Field Number menggunakan &lt;input type="number">, yang memungkinkan pengguna untuk memasukkan angka. Field ini juga bisa dibatasi dengan atribut min dan max untuk menetapkan rentang angka yang diperbolehkan, dan dilengkapi dengan panah kecil untuk memudahkan pengguna dalam menaikkan atau menurunkan angka yang dimasukkan.</p>
+                            </ol>
+                    </section>
+                </ol>
+            </section>
+
+
+        </article>
+    </main>
+
+    <nav>
+        <a href="HTML Container.html" class="kiri"><img src="Images/Tombol.svg" alt=""></a>
+        <h4>HTML Form</h4>
+        <a href="HTML Multimedia.html" class="kanan"><img src="Images/Tombol-kanan.svg" alt=""></a>
+    </nav>
+</body>
+</html>

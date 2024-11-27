@@ -1,0 +1,55 @@
+main > .judul > img{
+    float: left;
+    height: 80px;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+main{
+    margin-top: 10px;
+    /* margin-bottom: 70px; */
+}
+
+main > article{
+    clear: both;
+    
+}
+
+nav > .daftar-materi,
+nav > .mulai-belajar{
+    width: 135px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav > .daftar-materi{
+    color: #3B4F53;
+    outline: 2px solid #ccc;
+    outline-offset: -2px;
+}
+
+nav > .mulai-belajar{
+    color: #FFFFFF;
+    background-color: #3B4F53;
+}
+
+.DAFTAR-MATERI{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.isi-materi{
+    display: grid;
+}
+
+.isi{
+    text-align: left;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,65 @@
+.nomor-soal {
+    display: grid;
+    grid-template-columns: repeat(5, 32px);
+    gap: 10px;
+    width: max-content;
+    margin: 12px auto;
+}
+
+.kotak-nomor-soal {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #393939;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.kotak-nomor-soal.aktif{
+    background-color: #3F3F46;
+    color: #FFFFFF;
+    border: 1px solid #393939;
+}
+
+.kotak-nomor-soal:hover:not(.aktif){
+    background-color: #c0c0c0;
+}
+
+.pilihan-ganda{
+    display: grid;
+    
+}
+
+.pilihan{
+    display: flex;
+    margin: 5px 0;
+    padding: 0 5px;
+    height: 42px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #3B4F53;
+    border-radius: 8px;
+    color: #3B4F53;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + .pilihan {
+    background-color: #3B4F53;
+    color: #FFFFFF;
+}
+
+input[type="radio"]:hover:not(:checked) + .pilihan{
+    background-color: #c0c0c0;
+}
+
+li{
+    font-weight: 700;
+    padding-top: 20px;
+}

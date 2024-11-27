@@ -1,0 +1,20 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+    height: 64px;
+    border-bottom: 2px solid #ccc;
+}
+
+header > .right-menu-header{
+    display: flex;
+    align-items: center;
+    height: 75%;
+    gap: 5px;
+}
+
+header img{
+    height: 70%;
+    cursor: pointer;
+}
